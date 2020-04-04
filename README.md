@@ -16,3 +16,5 @@ Modules:
 
     a. Iris dataset
     
+2. Statistics: In this module I would try to implement some statistical tests that can be performed on the datasets
+    a. Q-Q plot
