@@ -17,4 +17,5 @@ Modules:
     a. Iris dataset
     
 2. Statistics: In this module I would try to implement some statistical tests that can be performed on the datasets
-    a. Q-Q plot
+    a. Q-Q plot- this is a graphical method to find out distribution(Guassian, Uniform, etc.)
+    b. Bootrapping technique- for calculating confidence Interval of our statistic, uses the computation power to compute the confidence Interval.
