@@ -1,0 +1,15 @@
+It is very difficult to visualise the data in higher dimensions. So we reduce the data to lower dimension as we human can visualise data in <=3D.
+lower  So for that we try to reduce the dimensions as lower dimensions are less complex. 
+This can be done using various methods, here for implementation I will be trying :
+  1. PCA- Principal component analysis
+  2. T-SNE- T distributed Stochastic Neighbor Embedding 
+ 
+I used MNIST-Digit Recognizer dataset for dimensionality reduction. 
+I implemented it step by step:
+  1. Standardise the datset(X`)
+  2. Calculate the covariance matrix S= (X^T.X)/n , where X: is the original data, X^T: transpose of X.
+  3. Calculate eigen values and eigen vectors of S we got, for eigen-value lambda l- l1 >= l2 >= l3 >=.......>=ld and corresponding
+      eigen-vector(v) - v1,v2.....vd.
+  4. Sum of eigen values gives the percentage of variance explained.
+  5. principal-Component(PC1) = v1
+  6. Now, (X`.v1) gives vector corresponding to PC_1.
