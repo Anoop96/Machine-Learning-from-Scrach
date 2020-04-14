@@ -23,6 +23,8 @@ PCA is very helpful in visualizing the higher dimensional data by converting it 
 So the final piece of application of PCA for dimensionality reduction is helpful in reducing the dimension while retaining the maximum variance(indicator of information).
 
 3. T-SNE (T-distributed Stochastic neighbour embedding):
+https://distill.pub/2016/misread-tsne/
+https://colah.github.io/posts/2014-10-Visualizing-MNIST/
 This is another great technique for dimensionality reduction and visualising the higher dimensional data into lower dimension. It tries to preserve the local relationship between the data , in other words it tries to preserve the neighbourhood of the data and embeds the points from higher dimensions to lower dimension keeping the distance same as it was in higher dimension.
 This algorithm is a probabilistic algorithm which means that it will give slightly different results each time we run this algorithm. 
 perplexity : it is a parameter in the algorithm which says for a point x how many point do you wish to relate. it should be less than data size. The algorithm should always be run multiple time with different perplexity levels untill it gives stable structure in the results.
