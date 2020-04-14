@@ -5,8 +5,8 @@ This can be done using various methods, here for implementation I will be trying
   1. PCA- Principal component analysis
   2. T-SNE- T distributed Stochastic Neighbor Embedding 
  
-I used MNIST-Digit Recognizer dataset for dimensionality reduction. 
-I implemented it step by step:
+1. I used PCA algorithm on MNIST-Digit Recognizer dataset for visualizing the data in lower dimensions. 
+first, I implemented it step by step:
   1. Standardise the datset(X`)
   2. Calculate the covariance matrix S= (X^T.X)/n , where X: is the original data, X^T: transpose of X.
   3. Calculate eigen values and eigen vectors of S we got, for eigen-value lambda l- l1 >= l2 >= l3 >=.......>=ld and corresponding
@@ -17,7 +17,20 @@ I implemented it step by step:
   
 Along with that also included the scikit inbuilt decomposition.PCA() method to calculate principal componets directly, just have to pass the standarised data into the function.
 
-PCA for dimensionality reduction:
+2. PCA for dimensionality reduction:
 PCA is very helpful in visualizing the higher dimensional data by converting it into 2D or 3D and allowing us to visualize the data. But sometimes we just want to reduce the dimesion with the pupose of reducing the complexity(higher dimesions needs complex model functions).
 
 So the final piece of application of PCA for dimensionality reduction is helpful in reducing the dimension while retaining the maximum variance(indicator of information).
+
+3. T-SNE (T-distributed Stochastic neighbour embedding):
+This is another great technique for dimensionality reduction and visualising the higher dimensional data into lower dimension. It tries to preserve the local relationship between the data , in other words it tries to preserve the neighbourhood of the data and embeds the points from higher dimensions to lower dimension keeping the distance same as it was in higher dimension.
+This algorithm is a probabilistic algorithm which means that it will give slightly different results each time we run this algorithm. 
+perplexity : it is a parameter in the algorithm which says for a point x how many point do you wish to relate. it should be less than data size. The algorithm should always be run multiple time with different perplexity levels untill it gives stable structure in the results.
+
+Iterations: like perplexity it is another important parameter of the algorithm. and the algorithm should be run couple of times to fix the iteration if it gives stable results.
+ Cluster sizes doesnot mean anything in T-Sne smaller cluster in actaul data can look epanded here and expanded data can look compressed.
+ Distance between clusters doesnot mean anything in the algorithm , althogh algo does a good job in capturing the local clusters of the datapoints, but it doesnot preserve the distance between the clusters. The cluster A might be closer to cluster B in original data, but here it might be further seperated.
+ 
+ Random noise doesn't look like noise with lower perplexity it shows that there are relation between the points. hence, we should be careful while considering the results.
+ we can see some shapes but we should always increase the perplexity to see where the shape preserves itslef to be confident.
+ 
